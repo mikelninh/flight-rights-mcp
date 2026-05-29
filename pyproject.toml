@@ -1,0 +1,33 @@
+[project]
+name = "flight-rights-mcp"
+version = "0.1.0"
+description = "EU261 flight compensation calculator + claim letter generator + extraordinary circumstances jurisprudence checker"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Mikel" }]
+license = { text = "MIT" }
+
+dependencies = [
+    "mcp>=1.0.0",
+    "civic-ai-mcp-toolkit>=0.1.0",
+]
+
+[project.scripts]
+flight-rights-mcp = "flight-rights_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["flight-rights_mcp*"]
+
+[tool.setuptools.package-data]
+"flight-rights_mcp" = ["data/*.json"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
