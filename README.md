@@ -55,6 +55,12 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
 }
 ```
 
+Or register with Claude Code instead:
+
+```bash
+claude mcp add flight-rights -- flight-rights-mcp
+```
+
 Restart Claude Desktop. Try:
 
 > *"Mein Flug LH458 von Frankfurt nach New York am 15.08.2024 hatte 4,5 Stunden Verspätung. Lufthansa beruft sich auf ein technisches Problem. Schreib mir das Forderungsschreiben."*

@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [project.scripts]
-flight-rights-mcp = "flight-rights_mcp.server:main"
+flight-rights-mcp = "flight_rights_mcp.server:main"
 
 [build-system]
 requires = ["setuptools>=68"]
@@ -21,10 +21,10 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["flight-rights_mcp*"]
+include = ["flight_rights_mcp*"]
 
 [tool.setuptools.package-data]
-"flight-rights_mcp" = ["data/*.json"]
+"flight_rights_mcp" = ["data/*.json"]
 
 [tool.ruff]
 line-length = 100
