@@ -1,0 +1,37 @@
+{
+  "date": "2026-08-07",
+  "cjeu_rulings": 2,
+  "policy_changes": 1,
+  "highlights": [
+    "EU261 revision received final Council clearance on 13 July 2026: codified 'extraordinary circumstances' definition, no-show clause ban, hand-baggage-inclusive price display, reinforced PRM rights. Applies 12 months + 20 days after OJ publication (~H2 2027).",
+    "T-656/24 (NI and HZ v European Air Charter AG, 04.03.2026): extraordinary circumstance on an earlier rotation leg excuses a later flight only with a direct causal link; carrier's own choice to wait for connecting passengers is not extraordinary -> EUR 400 each awarded.",
+    "C-45/24 (15.01.2026): cancellation refund must include the intermediary/booking-portal commission where the carrier accepted ticket issuance in its name and for its account."
+  ],
+  "sources": [
+    "https://www.consilium.europa.eu/en/press/press-releases/2026/07/13/council-gives-final-clearance-for-stronger-air-passenger-rights/",
+    "https://data.consilium.europa.eu/doc/document/ST-11389-2026-INIT/en/pdf",
+    "https://www.consilium.europa.eu/en/press/press-releases/2026/06/15/council-and-parliament-reach-landmark-agreement-on-stronger-eu-air-passenger-rights/",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62024TJ0656",
+    "https://euperspectives.eu/2026/03/delay-due-to-waiting-for-late-passengers-from-an-earlier-flight-triggers-compensation-top-court-rules/",
+    "https://airlawdigest.com/case/ni-and-hz-v-european-air-charter-ag-2026-t656-24-eugc/",
+    "https://dejure.org/dienste/vernetzung/rechtsprechung?Gericht=EuGH&Datum=15.01.2026&Aktenzeichen=C-45/24",
+    "https://www.lto.de/recht/nachrichten/n/c4524-eugh-flugausfall-airline-muss-provision-erstatten",
+    "https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/eugh-c4524-flugannullierung-airline-vermittlerprovision-erstattung-opodo-2026-01-15"
+  ],
+  "actions_taken": [
+    "Cloned mikelninh/flight-rights-mcp and created branch agent/eu-rights-watch-2026-08-07",
+    "Researched CJEU/EuGH transport case law, EU consumer-protection legislative pipeline and airline policy news",
+    "Audited check_extraordinary_circumstances + data/jurisprudence.json (10 cases) for coverage gaps",
+    "Wrote agent-digests/eu-rights-watch-2026-08-07.md with per-tool change recommendations",
+    "Wrote agent-logs/eu-rights-watch-2026-08-07.json",
+    "Opened PR for human review (no merge, no changes outside agent-digests/ and agent-logs/)"
+  ],
+  "tool_impact": [
+    {"tool": "check_extraordinary_circumstances", "file": "flight_rights_mcp/server.py:268", "change_needed": "Add rotation/previous-flight case T-656/24; plan dual-regime handling for the revised EU261 once OJ date is known"},
+    {"tool": "jurisprudence data", "file": "flight_rights_mcp/data/jurisprudence.json", "change_needed": "New entry european-air-charter-t656-24 (topic vorflug_rotation) - currently an unmatched excuse category"},
+    {"tool": "generate_claim_letter", "file": "flight_rights_mcp/server.py:403", "change_needed": "Add intermediary-commission refund paragraph citing C-45/24"},
+    {"tool": "agb-reader-mcp clause catalog", "file": "external repo", "change_needed": "Add 'No-Show-Klausel' and 'booking-fee excluded from refund' as prohibited clause types"}
+  ],
+  "repo": "flight-rights-mcp",
+  "branch": "agent/eu-rights-watch-2026-08-07"
+}
