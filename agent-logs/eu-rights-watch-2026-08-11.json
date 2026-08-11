@@ -1,0 +1,52 @@
+{
+  "date": "2026-08-11",
+  "cjeu_rulings": 2,
+  "policy_changes": 1,
+  "airline_policy_changes": 0,
+  "highlights": [
+    "CJEU C-399/24 (16 Oct 2025): a lightning strike + mandatory safety inspection on a preceding flight MAY qualify as 'extraordinary circumstances' under Art. 5(3), but only if the airline proves all reasonable measures were taken.",
+    "General Court T-656/24 (4 Mar 2026): a carrier's own discretionary operational decision (e.g. waiting for delayed passengers) can break the causal chain and defeat the Art. 5(3) extraordinary-circumstances defence.",
+    "EU air passenger-rights reform political agreement (15 Jun 2026): 96h proactive rights information, codified EC list, no-show ban on return flights; compensation thresholds unchanged; NOT yet in force (12 months after OJ publication)."
+  ],
+  "tool_impacts": [
+    {
+      "tool": "check_extraordinary_circumstances",
+      "file": "flight_rights_mcp/data/jurisprudence.json",
+      "change": "ADD case entry for C-399/24 (lightning strike + mandatory inspection = qualified extraordinary circumstance, subject to reasonable-measures proof)."
+    },
+    {
+      "tool": "check_extraordinary_circumstances",
+      "file": "flight_rights_mcp/data/jurisprudence.json",
+      "change": "ADD case entry for T-656/24 (carrier's own discretionary decision can break causal chain, defeating EC defence)."
+    },
+    {
+      "tool": "server.py / jurisprudence.json",
+      "file": "flight_rights_mcp/data/jurisprudence.json",
+      "change": "FUTURE (after OJ publication): align EC list with codified list from revised regulation; add 96h proactive-information entitlement note. Do NOT change yet."
+    }
+  ],
+  "sources": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62024CJ0399",
+    "https://aire.aero/the-cjeu-clarifies-extraordinary-circumstances-in-case-of-lightning-struck-aircraft/",
+    "https://curia.europa.eu/site/upload/docs/application/pdf/2026-03/cp260026en.pdf",
+    "https://www.jurist.org/news/2026/03/eu-court-strengthens-compensation-rights-for-delayed-air-passengers/",
+    "https://www.lexology.com/library/detail.aspx?g=638e6a8b-7560-4b45-8cb5-c358e5668191",
+    "https://transport.ec.europa.eu/news-events/news/commission-welcomes-landmark-agreement-revised-air-passenger-rights-2026-06-15_en",
+    "https://cms.law/en/int/legal-updates/new-european-regulation-on-air-passenger-rights-what-impact-for-the-air-transport-sector",
+    "https://www.lufthansa.com/dk/en/passenger-rights"
+  ],
+  "actions_taken": [
+    "cloned mikelninh/flight-rights-mcp to temp dir",
+    "created branch agent/eu-rights-watch-2026-08-11",
+    "researched CJEU/General Court rulings + EU consumer-protection + airline policy",
+    "wrote agent-digests/eu-rights-watch-2026-08-11.md",
+    "wrote agent-logs/eu-rights-watch-2026-08-11.json",
+    "committed artifacts",
+    "pushed branch",
+    "opened PR (human review only — agent will not merge)"
+  ],
+  "repo": "flight-rights-mcp",
+  "branch": "agent/eu-rights-watch-2026-08-11",
+  "pr_opened": true,
+  "merged": false
+}
