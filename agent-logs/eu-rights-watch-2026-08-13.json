@@ -1,0 +1,41 @@
+{
+  "date": "2026-08-13",
+  "cjeu_rulings": 3,
+  "policy_changes": 2,
+  "highlights": [
+    "EuGH C-399/24 (16.10.2025): Blitzeinschlag + Pflichtinspektion KANN außergewöhnlicher Umstand sein (Beweislast bei Airline) — Katalog-Lücke in jurisprudence.json.",
+    "EuGH C-558/24 (30.10.2025): Verspätung wird zum ursprünglichen Flugplan gemessen, nicht zur neuen Buchungsbestätigung — Schlupfloch geschlossen.",
+    "EuG T-656/24 (04.03.2026): Freiwilliges Warten der Airline bricht Kausalkette zu außergewöhnlichen Umständen — Carrier haftet.",
+    "EU-Parlament reformiert Fluggastrechte (07.07.2026): 9-Monats-Frist, 30-Tage-Zahlung, kostenloses Handgepäck, Sitzplatz Kinder — noch nicht in Kraft (Rat Anfang Aug 2026).",
+    "EU-Verbraucherschutz 2026: Widerrufsbutton (19.06.2026), Garantiehinweis (27.09.2026), Digital Fairness Act (Q4 2026) — betrifft AGB-Klauselkatalog."
+  ],
+  "sources": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A62024CJ0399",
+    "https://aire.aero/the-cjeu-clarifies-extraordinary-circumstances-in-case-of-lightning-struck-aircraft/",
+    "https://myflyright.com/about-us/press/court-of-justice-european-union-rules-in-favour-of-myflyright/",
+    "https://aire.aero/cjeu-rules-original-flight-arrival-time-determines-passenger-compensation/",
+    "https://www.dacbeachcroft.com/en/What-we-think/EU261-flight-delay-claims-when-airline-choices-break-the-causal-chain",
+    "https://www.europarl.europa.eu/news/en/press-room/20260703IPR46273/european-parliament-achieves-upgrade-to-air-passenger-rights",
+    "https://data.consilium.europa.eu/doc/document/PE-39-2026-INIT/en/pdf",
+    "https://commission.europa.eu/law/law-topic/consumer-protection-law_en",
+    "https://eur-lex.europa.eu/eli/dir/2024/825/oj/eng",
+    "https://www.globalpolicywatch.com/2026/02/what-to-watch-in-2026-key-developments-in-emea-consumer-protection/"
+  ],
+  "actions_taken": [
+    "Cloned mikelninh/flight-rights-mcp to temp watch dir",
+    "Created branch agent/eu-rights-watch-2026-08-13",
+    "Researched CJEU/EuGH transport + consumer case law and airline/policy changes via web_search/web_extract",
+    "Wrote agent-digests/eu-rights-watch-2026-08-13.md (5 bilingual DE+EN findings)",
+    "Wrote agent-logs/eu-rights-watch-2026-08-13.json",
+    "Committed both artifacts",
+    "Pushed branch",
+    "Opened PR against main (no self-merge per guardrail)"
+  ],
+  "tool_changes_recommended": [
+    "ADD case 'airhelp-c399-24' (lightning strike) to flight_rights_mcp/data/jurisprudence.json cases[] — required by check_extraordinary_circumstances (currently 10 cases, no lightning entry).",
+    "UPDATE generate_claim_letter / calculate_compensation advice to state delay is measured against ORIGINAL schedule (C-558/24).",
+    "CROSS-REFERENCE agb-reader-mcp clause catalogue: mark carry-on surcharges & seating fees as prohibited once EU reform (Fund 4) enters into force; flag dark-pattern / hidden-withdrawal clauses under Fund 5."
+  ],
+  "repo": "flight-rights-mcp",
+  "branch": "agent/eu-rights-watch-2026-08-13"
+}
