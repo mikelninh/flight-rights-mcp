@@ -1,0 +1,38 @@
+{
+  "date": "2026-08-20",
+  "cjeu_rulings": 2,
+  "policy_changes": 2,
+  "highlights": [
+    "CJEU C-399/24 (16.10.2025): lightning strike on aircraft = extraordinary circumstance (Art. 5(3) VO 261/2004), comparable to bird strike — airline NOT liable for the delayed follow-on flight.",
+    "General Court T-656/24 (04.03.2026): airline cannot rely on an earlier-flight extraordinary circumstance if its own autonomous wait decision is the determining cause of the later delay.",
+    "2026 EU air passenger-rights reform: Council final clearance 13.07.2026 — 96h info duty, 30-day reply, no-show ban, hand baggage included by default, stronger PRM rights; expected in force ~Aug 2027.",
+    "Lufthansa warning strike 12.02.2026 confirms Krüsemann: internal staff strikes are NOT extraordinary circumstances; full EU261 compensation (up to €600) due."
+  ],
+  "sources": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62024CJ0399",
+    "https://www.lexology.com/library/detail.aspx?g=1dc2fbe2-18d8-47fe-a25b-078df172150d",
+    "https://curia.europa.eu/site/upload/docs/application/pdf/2026-03/cp260026en.pdf",
+    "https://www.consilium.europa.eu/en/press/press-releases/2026/07/13/council-gives-final-clearance-for-stronger-air-passenger-rights/",
+    "https://www.consilium.europa.eu/en/policies/consumer-protection-travel-rights/",
+    "https://www.mondaq.com/aviation/1826102/strengthening-eu-air-passenger-rights-the-2026-reform-explained",
+    "https://www.euronews.com/my-europe/2026/07/10/inside-the-eus-bittersweet-deal-to-update-air-passenger-rights",
+    "https://www.flight-delayed.com/en/news/2026/02/11/lufthansa-strike-feb-2026",
+    "https://www.lufthansa.com/us/en/passenger-rights"
+  ],
+  "actions_taken": [
+    "Cloned mikelninh/flight-rights-mcp to temp dir",
+    "Created branch agent/eu-rights-watch-2026-08-20",
+    "Researched CJEU/General Court transport + consumer rulings via web_search/web_extract",
+    "Wrote agent-digests/eu-rights-watch-2026-08-20.md (4 findings, bilingual DE+EN)",
+    "Wrote agent-logs/eu-rights-watch-2026-08-20.json",
+    "Noted tool changes: flight-rights-mcp jurisprudence.json + check_extraordinary_circumstances (lightning strike, rotation causality); agb-reader-mcp clause catalog (no-show, hand baggage)",
+    "Committed and pushed branch; opened PR for human review (NO merge)"
+  ],
+  "repo": "flight-rights-mcp",
+  "branch": "agent/eu-rights-watch-2026-08-20",
+  "tool_changes_flagged": [
+    "flight_rights_mcp/data/jurisprudence.json: add case airhelp-c399-24 (lightning strike = extraordinary)",
+    "flight_rights_mcp/server.py check_extraordinary_circumstances: handle rotation causality (T-656/24)",
+    "agb-reader-mcp clause catalog: flag no-show + hand-baggage-fee clauses as planned-unlawful (~2027)"
+  ]
+}
