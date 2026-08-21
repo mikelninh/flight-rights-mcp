@@ -1,0 +1,30 @@
+{
+  "date": "2026-08-21",
+  "cjeu_rulings": 1,
+  "policy_changes": 2,
+  "highlights": [
+    "EuG T-656/24 (European Air Charter, 04.03.2026): autonomous airline decision to wait for passengers from an earlier flight can break the causal link to an extraordinary circumstance of that earlier flight -> airline cannot rely on Art. 5(3) for the subsequent flight.",
+    "EU Council/Parliament June 2026 political agreement on first air-passenger-rights reform in 22 years: 3-hour compensation threshold kept; new 96h notification + 30-day reply duty; no-show protection; hand baggage included by default.",
+    "EU agreement prevents airlines (e.g. Ryanair) from forcing passengers to download an app for a boarding pass."
+  ],
+  "sources": [
+    "https://curia.europa.eu/site/upload/docs/application/pdf/2026-03/cp260026en.pdf",
+    "https://infocuria.curia.europa.eu/tabs/redirect/juris/liste.jsf?num=T-656/24",
+    "https://www.lexology.com/library/detail.aspx?g=638e6a8b-7560-4b45-8cb5-c358e5668191",
+    "https://www.consilium.europa.eu/en/press/press-releases/2026/06/15/council-and-parliament-reach-landmark-agreement-on-stronger-eu-air-passenger-rights/",
+    "https://www.reuters.com/world/eu-countries-agree-maintain-compensation-paid-passengers-flight-delays-2026-06-12/",
+    "https://www.euronews.com/my-europe/2026/07/10/inside-the-eus-bittersweet-deal-to-update-air-passenger-rights"
+  ],
+  "actions_taken": [
+    "cloned mikelninh/flight-rights-mcp to fresh temp dir",
+    "checked out branch agent/eu-rights-watch-2026-08-21",
+    "researched CJEU/Curia judgments, EU consumer-protection updates and airline policy changes via web_search/web_extract",
+    "wrote agent-digests/eu-rights-watch-2026-08-21.md (3 bilingual findings + maintainer tool-change notes)",
+    "wrote agent-logs/eu-rights-watch-2026-08-21.json",
+    "committed artifacts on branch",
+    "pushed branch to origin",
+    "opened PR against main (no self-merge)"
+  ],
+  "repo": "flight-rights-mcp",
+  "branch": "agent/eu-rights-watch-2026-08-21"
+}
