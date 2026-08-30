@@ -1,0 +1,28 @@
+{
+  "date": "2026-08-30",
+  "cjeu_rulings": 2,
+  "policy_changes": 1,
+  "highlights": [
+    "CJEU C-399/24 (16.10.2025): lightning strike + mandatory inspection may be an extraordinary circumstance under Art. 5(3) VO 261/2004 if airline proves all reasonable measures.",
+    "General Court T-656/24 (04.03.2026): an airline's autonomous decision in a rotation can break the causal link to an earlier-flight extraordinary circumstance, preserving the compensation claim.",
+    "Council & Parliament provisional agreement (15.06.2026): first EU air passenger-rights overhaul since 2004 — 96h/30-day claim rules, burden of proof on airline, no-show ban, hand baggage included; amounts stay EUR 250/400/600. Not yet in force."
+  ],
+  "sources": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A62024CJ0399",
+    "https://curia.europa.eu/site/upload/docs/application/pdf/2026-03/cp260026en.pdf",
+    "https://www.consilium.europa.eu/en/press/press-releases/2026/06/15/council-and-parliament-reach-landmark-agreement-on-stronger-eu-air-passenger-rights/",
+    "https://www.beuc.eu/letters/joint-call-eu-policymakers-uphold-and-strengthen-air-passenger-rights"
+  ],
+  "actions_taken": [
+    "cloned mikelninh/flight-rights-mcp",
+    "created branch agent/eu-rights-watch-2026-08-30",
+    "wrote agent-digests/eu-rights-watch-2026-08-30.md",
+    "wrote agent-logs/eu-rights-watch-2026-08-30.json",
+    "committed artifacts",
+    "pushed branch",
+    "opened PR (human review only; no merge)"
+  ],
+  "repo": "flight-rights-mcp",
+  "branch": "agent/eu-rights-watch-2026-08-30",
+  "note": "No tool source files were modified (guardrail). jurisprudence.json currently ends at C-517/17 (2020) and lacks both new rulings; maintainer update instructions are in the digest."
+}
