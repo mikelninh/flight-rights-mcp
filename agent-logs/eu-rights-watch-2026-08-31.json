@@ -1,0 +1,52 @@
+{
+  "date": "2026-08-31",
+  "cjeu_rulings": 2,
+  "policy_changes": 1,
+  "highlights": [
+    "EuG T-656/24 (März 2026): Eigene Entscheidung der Airline zu warten/umzuplanen unterbricht die Kausalkette zu einem außergewöhnlichen Umstand — Anspruch bei 3h+ Verspätung bleibt bestehen. Betrifft Tool check_extraordinary_circumstances.",
+    "Rat + Parlament, 15.06.2026: Politische Einigung zur Revision der VO 261/2004 — 3-Stunden-Schwelle und Beträge (250/400/600 €) bleiben; neu: 30-Tage-Antwortpflicht, 96h-Informationspflicht, No-Show-Verbot, Handgepäck im Preis, Umbuchung binnen 3h sonst bis 400% Ticketpreis. Noch nicht formell angenommen.",
+    "BGH 08.01.2026 III ZR 8/25: AGB-Klausel, die den Beginn der 24-monatigen Mindestlaufzeit an die Freischaltung koppelt, ist unwirksam (§ 309 Nr. 9 Buchst. a BGB). Betrifft Klauselkatalog von agb-reader-mcp."
+  ],
+  "sources": [
+    "https://curia.europa.eu/site/upload/docs/application/pdf/2026-03/cp260026en.pdf",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62024TJ0656",
+    "https://www.jurist.org/news/2026/03/eu-court-strengthens-compensation-rights-for-delayed-air-passengers/",
+    "https://eur-lex.europa.eu/eli/reg/2004/261/oj/eng",
+    "https://www.consilium.europa.eu/en/press/press-releases/2026/06/15/council-and-parliament-reach-landmark-agreement-on-stronger-eu-air-passenger-rights/",
+    "https://www.consilium.europa.eu/en/press/press-releases/2025/06/05/council-sets-position-on-clearer-and-improved-rules-for-air-passengers/",
+    "https://cms.law/en/int/legal-updates/new-european-regulation-on-air-passenger-rights-what-impact-for-the-air-transport-sector",
+    "https://www.vzbv.de/urteile/zur-unwirksamkeit-einer-klausel-zur-laufzeitverlaengerung-durch-spaeten-anschlussbeginn"
+  ],
+  "actions_taken": [
+    "Fresh clone of mikelninh/flight-rights-mcp",
+    "Created branch agent/eu-rights-watch-2026-08-31",
+    "Targeted research: CJEU/General Court transport case law, Council/Parliament EU261 revision, German BGH consumer T&C case law",
+    "Wrote bilingual digest agent-digests/eu-rights-watch-2026-08-31.md (DE + ### EN block per finding)",
+    "Wrote this log agent-logs/eu-rights-watch-2026-08-31.json",
+    "Flagged required change to tool check_extraordinary_circumstances (data/jurisprudence.json: new case eug-t656-24-kausalkette)",
+    "Flagged required change to agb-reader-mcp clause catalog (Laufzeitbeginn an späteres Ereignis gekoppelt)",
+    "Committed and pushed branch; opened PR for human review (NOT merged)"
+  ],
+  "tool_impact": [
+    {
+      "repo": "flight-rights-mcp",
+      "tool": "check_extraordinary_circumstances",
+      "file": "flight_rights_mcp/data/jurisprudence.json",
+      "change": "Add case eug-t656-24-kausalkette (topic kausalkette_unterbrochen); airline's own waiting/rescheduling decision breaks the causal link -> likely_extraordinary=False"
+    },
+    {
+      "repo": "flight-rights-mcp",
+      "tool": "calculate_compensation / check_eu261_applicability / generate_claim_letter",
+      "file": "flight_rights_mcp/server.py",
+      "change": "Pending only — update after formal adoption of the revised Regulation (thresholds unchanged, add 30-day reply and 96h information duties)"
+    },
+    {
+      "repo": "agb-reader-mcp",
+      "tool": "clause catalog",
+      "file": "n/a (cross-reference)",
+      "change": "Add clause category: contract term start tied to later event (activation/provision) -> invalid per § 309 Nr. 9 lit. a BGB, BGH III ZR 8/25"
+    }
+  ],
+  "repo": "flight-rights-mcp",
+  "branch": "agent/eu-rights-watch-2026-08-31"
+}
